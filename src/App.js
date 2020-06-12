@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import AddBookmark from './AddBookmark/AddBookmark';
+import EditBookmark from './EditBookmark/EditBookmark';
 import BookmarkList from './BookmarkList/BookmarkList';
 import BookmarksContext from './BookmarksContext';
 import Nav from './Nav/Nav';
 import config from './config';
 import './App.css';
+
 
 class App extends Component {
   state = {
@@ -56,12 +58,23 @@ class App extends Component {
       })
   }
 
+  updateBookmark = updatedBookmark => {
+    this.setState({
+      bookmarks: this.state.bookmarks.map(bookmark =>
+        (bookmark.id !== updatedBookmark.id) ? bookmark : updatedBookmark
+        )
+    })
+  }
+
   render() {
     const contextValue = {
       bookmarks: this.state.bookmarks,
       addBookmark: this.addBookmark,
       deleteBookmark: this.deleteBookmark,
+      updateBookmark: this.updateBookmark
     }
+
+
     return (
       <main className='App'>
         <h1>Bookmarks!</h1>
@@ -71,6 +84,10 @@ class App extends Component {
             <Route
               path='/add-bookmark'
               component={AddBookmark}
+            />
+              <Route
+              path='/edit/:bookmarkId'
+              component={EditBookmark}
             />
             <Route
               exact
