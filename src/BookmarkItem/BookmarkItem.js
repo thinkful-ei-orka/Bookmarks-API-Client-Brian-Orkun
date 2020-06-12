@@ -6,6 +6,7 @@ import config from '../config';
 import './BookmarkItem.css';
 import { Link } from 'react-router-dom';
 
+// To delete items
 function deleteBookmarkRequest(bookmarkId, cb) {
   fetch(config.API_ENDPOINT + `/${bookmarkId}`, {
     method: 'DELETE',
@@ -28,6 +29,7 @@ function deleteBookmarkRequest(bookmarkId, cb) {
     })
 }
 
+// to edit bookmarks
 function editBookmark(bookmarkId, bookmarkData) {
   const newBookmarks = this.state.bookmarks.map(bookmark => {
     if (bookmark.id === Number(bookmarkId)) return {

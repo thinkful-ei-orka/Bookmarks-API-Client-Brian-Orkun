@@ -8,6 +8,7 @@ const Required = () => (
   <span className='AddBookmark__required'>*</span>
 )
 
+// to edit bookmarks
 class EditBookmark extends Component {
   static propTypes = {
       match: PropTypes.shape({
@@ -29,6 +30,7 @@ class EditBookmark extends Component {
       rating: 1
     };
 
+    // to run after component mounts
     componentDidMount() {
         const { bookmarkId } = this.props.match.params
         fetch(config.API_ENDPOINT + `/${bookmarkId}`, {
@@ -58,6 +60,7 @@ class EditBookmark extends Component {
         })
     }
     
+    // to set state of all items
     handleChangeTitle = e => {
         this.setState({ title: e.target.value })
     };
@@ -101,6 +104,7 @@ class EditBookmark extends Component {
       })
   }
 
+    // to reset the fields
     resetFields = (newFields) => {
         this.setState({
             id: newFields.id || '',
