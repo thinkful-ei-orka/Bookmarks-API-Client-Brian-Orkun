@@ -4,3 +4,16 @@
 {"message":"Bookmark with id 12345 not found.","level":"error"}
 {"message":"Bookmark with id 12345 not found.","level":"error"}
 {"message":"Bookmark with id 12345 not found.","level":"error"}
+{"message":"Description is required","level":"error"}
+{"message":"Bookmark with id 5 not found.","level":"error"}
+{"message":"Bookmark with id 7de0e8c8-c76d-48fb-b2f6-4586d6de953d created","level":"info"}
+{"message":"Bookmark with id 29568798-b7bc-4efd-8897-a2aff3087da8 created","level":"info"}
+{"message":"Bookmark with id 3861a39a-cd9a-4fb2-9002-75e8eeeb4b66 created","level":"info"}
+{"message":"Bookmark with id 87943920-0a68-4d62-bafe-de8430712980 created","level":"info"}
+{"message":"Bookmark with id 12345 not found","level":"error"}
+{"message":"Bookmark with id 12345 not found","level":"error"}
+{"message":"Bookmark with id 12345 not found","level":"error"}
+{"message":"Bookmark with id 12345 not found","level":"error"}
+{"message":"Bookmark with id 12345 not found","level":"error"}
+{"message":"Bookmark with id 12345 not found","level":"error"}
+{"message":"Bookmark with id 12345 not found","level":"error"}
